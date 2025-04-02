@@ -1,15 +1,14 @@
+import { UserProvider } from "./UserContext";
+import UserProfile from "./UserProfile";
+import UserUpdate from "./UserUpdate";
 
-import Counter from "./Counter";
-import Profile from "./Profile";
-import ShoppingList from "./ShoppingList";
-import TodoList from "./TodoList";
 
 const App = () => {
-  return <div>
-    <Counter />
-    <TodoList />
-    <Profile />
-    <ShoppingList/>
-  </div>
+  return (
+    <UserProvider>
+      <UserProfile />
+      <UserUpdate/>
+    </UserProvider>
+  );
 }
 export default App;
